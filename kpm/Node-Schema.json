@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "required": ["ServerName", "Entrees"],
+
+  "properties": {
+    "ServerName": {
+      "type": "string"
+    },
+    "Entrees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "Id",
+          "Author",
+          "Description",
+          "PackageFileUri"
+        ],
+        "properties": {
+          "Id": {
+            "type": "string"
+          },
+          "Author": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
+          },
+          "PackageFileUri": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
